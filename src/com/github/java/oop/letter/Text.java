@@ -42,7 +42,7 @@ public class Text implements Comparable<Text> {
 
 	@Override
 	public String toString() {
-		return "letter=" + letter + " frequency=" + String.format("%2.02f", frequency);
+		return "letter=" + letter + " frequency=" + String.format("%2.03f", frequency);
 	}
 
 }
