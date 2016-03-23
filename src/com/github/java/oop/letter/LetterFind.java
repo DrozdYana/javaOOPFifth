@@ -11,20 +11,11 @@ public class LetterFind {
 	private ArrayList<String> list = new ArrayList<>();
 	private TreeSet<Text> textSet = new TreeSet<>();
 
-	public LetterFind(ArrayList<String> list) {
+	public LetterFind() {
 		super();
-		this.list = list;
 	}
 
-	public ArrayList<String> getList() {
-		return list;
-	}
-
-	public void setList(ArrayList<String> list) {
-		this.list = list;
-	}
-
-	public void readText(File file) {
+	public ArrayList<String> readText(File file) {
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			if (!file.exists() || !file.isFile()) {
 				throw new IllegalArgumentException("FILE DOESN'T EXIST!!!");
@@ -43,6 +34,7 @@ public class LetterFind {
 		} catch (IOException ex) {
 			System.out.println(ex);
 		}
+		return list;
 	}
 
 	public void frequency(ArrayList<String> list) {
